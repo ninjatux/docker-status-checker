@@ -17,4 +17,6 @@ If you want to check them all in once you can run `ninjatux/multiple-http-status
 docker run -d --name="statuschecker" -p "80:9090" --link "myapp1:myapp1" --link "myapp2:myapp2" --link "myapp3:myapp3" -e "API_HEALTH_ENDPOINTS=http://myapp1:8081/status,http://myapp2:8082/status,http://myapp3:8083/status" ninjatux/multiple-http-status-checker
 ```
 
+Then going to `http://127.0.0.1:80/status` will trigger the check on all the endpoints configured. The results page will contain a simple `200 OK` if all the endpoints are up & running and a `500` with the full list of working and non working andpoint if one or more endpoint are down.
+
 The application expects the a list of endpoints separated by a comma in an environment variable called `API_HEALTH_ENDPOINTS`.
