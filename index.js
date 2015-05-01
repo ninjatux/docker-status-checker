@@ -10,8 +10,8 @@ var config = {
     }
 };
 
-var endpoints = process.env.API_ENDPOINTS ?
-    process.env.API_ENDPOINTS.split(',') : '';
+var endpoints = process.env.API_HEALTH_ENDPOINTS ?
+    process.env.API_HEALTH_ENDPOINTS.split(',') : '';
 
 var virgilio = new Virgilio(config);
 
