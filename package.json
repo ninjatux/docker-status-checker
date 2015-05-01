@@ -1,0 +1,16 @@
+{
+  "name": "api-status-aggregator",
+  "version": "1.0.0",
+  "description": "Docker container useful for aggregating multiple APIs status checks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Valerio Barrila",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.55.0",
+    "virgilio": "^0.12.5",
+    "virgilio-http": "^0.8.1"
+  }
+}
