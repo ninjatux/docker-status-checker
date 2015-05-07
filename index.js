@@ -6,7 +6,7 @@ var config = {
         name: 'status-aggregator'
     },
     http: {
-        port: 9090
+        port: process.env.PORT ? process.env.PORT : 9090
     }
 };
 
