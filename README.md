@@ -19,4 +19,6 @@ docker run -d --name="statuschecker" -p "80:9090" --link "myapp1:myapp1" --link 
 
 Then going to `http://127.0.0.1:80/status` will trigger the check on all the endpoints configured. The results page will contain a simple `200 OK` if all the endpoints are up & running and a `500` with the full list of working and non working andpoint if one or more endpoint are down.
 
+You can specify on which port the status application will listen specifying another environment variable called `PORT`.
+
 The application expects the a list of endpoints separated by a comma in an environment variable called `API_HEALTH_ENDPOINTS`.
