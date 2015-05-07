@@ -32,14 +32,15 @@ virgilio.http.get('/status')
         });
         Promise.settle(checks).then(function (results) {
             virgilio.log$.info('Checks completed');
-            results.forEach(function (result) {
+            results.forEach(function (result, index) {
                 if(result.isFulfilled()) {
                     var response = result.value()[0];
-                    responseObj[response.request.host] = 'OK';
+                    responseObj[endpoints[index]] = 'OK';
                 } else if(result.isRejected()) {
                     failed = true;
                     var err = result.reason();
-                    responseObj[err.cause.hostname] = err.message;
+                    console.log();
+                    responseObj[endpoints[index]] = err.message;
                 }
             });
         })
