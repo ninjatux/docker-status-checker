@@ -1,5 +1,5 @@
 # Pulling nodejs base image
-FROM mhart/alpine-node:0.12
+FROM mhart/alpine-node:6
 
 # Skip npm install if package.json didn't changed
 ADD package.json /tmp/package.json
