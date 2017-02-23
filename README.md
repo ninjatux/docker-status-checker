@@ -1,6 +1,6 @@
 # Docker Multiple HTTP status checker
 
-This project takes inspiration from [docker-status](https://github.com/zooniverse/docker-statushttps://github.com/zooniverse/docker-status) but the server side part is built with node.js. Can be used to check multiple API status pages at once, useful if used with components like Amazon Elastic Load Balances which allow just single HTTP status checks.
+This project takes inspiration from [docker-status](https://github.com/zooniverse/docker-status) but the server side part is built with node.js. Can be used to check multiple API status pages at once, useful if used with components like Amazon Elastic Load Balances which allow just single HTTP status checks.
 
 ## How to use this
 Let's say that you want to run multiple application containers on the same host behind a single ELB.
