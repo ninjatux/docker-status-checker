@@ -1,5 +1,5 @@
 # Pulling nodejs base image
-FROM node:0.12
+FROM node:6-alpine
 
 # Skip npm install if package.json didn't changed
 ADD package.json /tmp/package.json
